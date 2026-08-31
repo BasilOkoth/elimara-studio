@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+<title>Page not found — Elimara Studio</title></head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">ELIMARA <em>Studio</em></a>
+    <nav class="desktop-nav">
+      <a href="index.html#works">Available works</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="index.html#provenance">Provenance</a>
+      <a href="index.html#collectors">Collectors</a>
+      <a href="index.html#about">About</a>
+      <button class="nav-cta" onclick="elimaraContact('private viewing or trade enquiry')">Enquire</button>
+    </nav>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#works">Available works</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="index.html#provenance">Provenance</a>
+  <a href="index.html#collectors">Collectors</a>
+  <a href="index.html#about">About</a>
+</div>
+
+<main class="not-found"><div class="inner"><div class="eyebrow">404</div><h1 class="display-sm">This page has moved.</h1><p class="lead">Return to the studio and continue exploring available works and commissions.</p><a class="btn primary" href="index.html">Return to Elimara Studio</a></div></main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Elimara<br>Studio</div>
+        <p style="max-width:420px;margin-top:20px">Limited-edition computational art and site-specific commissions for collectors, residences, workplaces and hospitality spaces.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="eyebrow">Explore</div>
+        <a href="index.html#works">Available works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="index.html#provenance">Provenance</a>
+        <a href="index.html#collectors">Collector list</a>
+      </div>
+      <div class="footer-nav">
+        <div class="eyebrow">Studio</div>
+        <a href="index.html#about">About</a>
+        <a href="#" onclick="elimaraContact('a private viewing');return false;">Private viewing</a>
+        <a href="#" onclick="elimaraContact('a trade or interior-design enquiry');return false;">Trade enquiries</a>
+        <a href="commissions.html#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Elimara Technologies Limited / Artist. All rights reserved.</span>
+      <span>Nairobi, Kenya · International delivery quoted individually</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal" id="contactSetupModal">
+  <div class="modal-panel">
+    <button class="close-btn" data-close="contactSetupModal">×</button>
+    <div class="eyebrow">CONTACT SETUP</div>
+    <h2>Almost ready for enquiries.</h2>
+    <p class="muted">The site is prepared for WhatsApp or email enquiries, but your live contact details have not yet been inserted.</p>
+    <div class="status-box" id="contactSetupText"></div>
+    <p class="micro">Add your WhatsApp number and/or email in <strong>assets/js/config.js</strong>. No other site files need to change.</p>
+  </div>
+</div>
+
+<div class="modal" id="reserveModal">
+  <div class="modal-panel">
+    <button class="close-btn" data-close="reserveModal">×</button>
+    <div class="eyebrow">RESERVE AN EDITION</div>
+    <h2 id="reserveTitle">Artwork</h2>
+    <div class="product-price" id="reservePrice"></div>
+    <form id="reserveForm">
+      <input type="hidden" name="artwork" id="reserveArtwork">
+      <div class="form-row">
+        <div class="field"><label>Name</label><input required name="name"></div>
+        <div class="field"><label>Phone</label><input required name="phone" placeholder="+254..."></div>
+      </div>
+      <div class="field"><label>Delivery location</label><input required name="location" placeholder="Nairobi / Kenya / International"></div>
+      <div class="status-box">No payment is taken by this demo checkout. When live payment credentials are connected, this reservation flow can be upgraded to M-PESA, card and bank payment.</div>
+      <button class="btn primary full" type="submit">Send reservation request</button>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body></html>

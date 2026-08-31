@@ -15,3 +15,6 @@ services:
       - path: /*
         name: X-Frame-Options
         value: SAMEORIGIN
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800

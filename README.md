@@ -1,67 +1,125 @@
-# Elimara Studio
+# Elimara Studio — Premium Storefront
 
-Premium online storefront for Elimara Studio limited-edition computational art.
+A static, Render-ready art-commerce storefront for Elimara Studio.
 
-## Current works
-- Nebula I — Emergence
-- Nebula II — Convergence
+## What's new in this version
 
-## Features
-- Responsive premium gallery storefront
-- Artwork detail views
-- Edition numbering and provenance
-- Cart
-- Collector checkout request form
-- M-PESA / card / bank placeholders
-- Commission enquiries
-- Room mockups
-- Certificate information
+- Premium responsive visual redesign
+- Dedicated artwork pages:
+  - `nebula-i-emergence.html`
+  - `nebula-ii-convergence.html`
+- Dedicated `commissions.html` sales funnel
+- Interactive browser-based wall preview
+- Residential, premium-scale and corporate/hospitality commission positioning
+- Commission enquiry form
+- Collector-list form
+- Provenance / sample certificate presentation
+- Individual SEO metadata for artwork pages
+- `sitemap.xml`
+- `robots.txt`
+- JSON-LD structured data for the studio and artworks
+- WebP artwork/mockup previews for faster loading
+- No fake sold-count claims
+- Render blueprint retained
 
-## Important before accepting live payments
-The current checkout is a demo/order-request interface. It does **not** process money.
+## Repository structure
 
-Before switching to live payments, connect:
-1. Elimara Technologies Limited M-PESA Paybill/API credentials
-2. A card payment processor, if required
-3. Official company bank details
-4. Working studio email address
-5. WhatsApp Business number
-6. Shipping/delivery policy
-7. Terms, returns/refunds and privacy information
+```text
+index.html
+commissions.html
+nebula-i-emergence.html
+nebula-ii-convergence.html
+404.html
+render.yaml
+robots.txt
+sitemap.xml
+README.md
+.gitignore
 
-## Deploy on Render
+assets/
+  css/
+    styles.css
+  js/
+    config.js
+    app.js
+  data/
+    works.json
+  images/
+    nebula-emergence.png
+    nebula-emergence.webp
+    nebula-convergence.png
+    nebula-convergence.webp
+    mockup-living-room.png
+    mockup-living-room.webp
+    mockup-office.png
+    mockup-office.webp
+    mockup-hallway.png
+    mockup-hallway.webp
+    mockup-study.png
+    mockup-study.webp
+```
 
-### Option A — easiest
-1. Create a GitHub repository, e.g. `elimara-studio`.
-2. Upload all files in this package to the repository root.
-3. In Render choose **New → Static Site**.
-4. Connect the GitHub repository.
-5. Select your deployment branch, normally `main`.
-6. Build Command: `echo "No build required"`
-7. Publish Directory: `.`
-8. Deploy.
+## IMPORTANT — configure contact before marketing
 
-Render will give the site an `onrender.com` URL.
+Open:
 
-### Option B — Render Blueprint
-The included `render.yaml` can also be used by Render as a Blueprint.
+`assets/js/config.js`
 
-## Suggested future domain
-- studio.elimara.co.ke
-- or elimara.co.ke/studio
+Add at least one real contact channel:
 
-## Files
-- `index.html` — storefront
-- `styles.css` — visual design
-- `app.js` — cart, details and demo checkout
-- `assets/` — artwork and room mockups
-- `render.yaml` — Render deployment configuration
+```js
+email: "YOUR_EMAIL",
+whatsappNumber: "2547XXXXXXXX",
+```
 
-## Updating prices
-The product data is currently in `app.js`.
+Use digits only for WhatsApp and include the country code.
 
-## Current demonstration prices
-- Nebula I — Emergence: KES 28,000
-- Nebula II — Convergence: KES 28,000
+You can also add:
+- Instagram URL
+- LinkedIn URL
+- collector form endpoint
 
-Review these before public launch.
+Until contact details are added, enquiry buttons show an honest setup message rather than pretending a lead has been submitted.
+
+## Collector form
+
+The collector-list form is visually complete but requires a real endpoint before it can save leads. You can later connect Formspree or another service by adding its endpoint to:
+
+`collectorFormEndpoint`
+
+in `assets/js/config.js`.
+
+## Payments
+
+This package intentionally does not charge cards or M-PESA yet.
+
+The "Reserve an edition" flow is designed to route a structured request to WhatsApp or email after you add contact details.
+
+When Elimara's official payment credentials are ready, this can later be upgraded to:
+- M-PESA STK Push
+- bank payment instructions
+- card payment
+- confirmed edition allocation
+- automated certificate number assignment
+
+## Render
+
+Use:
+- Build command: `echo "No build required"`
+- Publish directory: `.`
+
+Render should redeploy automatically whenever the connected `main` branch changes.
+
+## Search indexing
+
+After deployment:
+1. Confirm `/sitemap.xml` loads.
+2. Add the Render URL to Google Search Console.
+3. Submit:
+   `https://elimara-studio.onrender.com/sitemap.xml`
+4. Request indexing for:
+   - homepage
+   - commissions page
+   - both artwork pages
+
+When you later buy a domain, update `baseUrl` in `assets/js/config.js`, canonical URLs in the HTML pages, and the URLs in `sitemap.xml`.
