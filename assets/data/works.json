@@ -1,0 +1,38 @@
+[
+  {
+    "id": "nb01",
+    "slug": "nebula-i-emergence",
+    "title": "Nebula I \u2014 Emergence",
+    "shortTitle": "Emergence",
+    "series": "Nebula",
+    "year": 2026,
+    "price": 28000,
+    "editionSize": 25,
+    "code": "ELA-NB01",
+    "image": "assets/images/nebula-emergence.webp",
+    "imagePng": "assets/images/nebula-emergence.png",
+    "mockup": "assets/images/mockup-living-room.webp",
+    "medium": "Archival pigment print on 100% cotton rag",
+    "dimensions": "700 \u00d7 1000 mm",
+    "availability": "Available",
+    "story": "Emergence explores the moment order begins to surface from repetition. Curved geometric fields accumulate, echo and shift until the system feels almost alive \u2014 suspended between code, rhythm and perception."
+  },
+  {
+    "id": "nb02",
+    "slug": "nebula-ii-convergence",
+    "title": "Nebula II \u2014 Convergence",
+    "shortTitle": "Convergence",
+    "series": "Nebula",
+    "year": 2026,
+    "price": 28000,
+    "editionSize": 25,
+    "code": "ELA-NB02",
+    "image": "assets/images/nebula-convergence.webp",
+    "imagePng": "assets/images/nebula-convergence.png",
+    "mockup": "assets/images/mockup-office.webp",
+    "medium": "Archival pigment print on 100% cotton rag",
+    "dimensions": "700 \u00d7 1000 mm",
+    "availability": "Available",
+    "story": "Convergence studies attraction, repetition and shared direction. Warm metallic forms gather around luminous points, creating a field that feels architectural from a distance and intricate at close range."
+  }
+]

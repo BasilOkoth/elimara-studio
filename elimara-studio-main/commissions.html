@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<title>Commission Custom Computational Art in Nairobi — Elimara Studio</title>
+<meta name="description" content="Commission site-specific computational art for homes, executive offices, hotels, receptions and interior-design projects in Nairobi and beyond. Complimentary wall preview available.">
+<link rel="canonical" href="https://elimara-studio.onrender.com/commissions.html">
+<meta property="og:title" content="Commission Custom Computational Art — Elimara Studio">
+<meta property="og:description" content="Custom computational artwork designed around your wall, scale and space.">
+<meta property="og:image" content="https://elimara-studio.onrender.com/assets/images/mockup-office.webp">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">ELIMARA <em>Studio</em></a>
+    <nav class="desktop-nav">
+      <a href="index.html#works">Available works</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="index.html#provenance">Provenance</a>
+      <a href="index.html#collectors">Collectors</a>
+      <a href="index.html#about">About</a>
+      <button class="nav-cta" onclick="elimaraContact('private viewing or trade enquiry')">Enquire</button>
+    </nav>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#works">Available works</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="index.html#provenance">Provenance</a>
+  <a href="index.html#collectors">Collectors</a>
+  <a href="index.html#about">About</a>
+</div>
+
+
+<main>
+  <section class="commission-hero">
+    <div class="copy fade-up">
+      <div class="eyebrow">COMMISSION ELIMARA STUDIO</div>
+      <h1 class="display-sm">Made for your wall,<br>not anybody's wall.</h1>
+      <p class="lead">Site-specific computational art for residences, executive offices, hotels, receptions and interior-design projects. Begin with the space. We develop the artwork around it.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#visualizer">Preview art on your wall</a>
+        <a class="btn" href="#enquiry">Request a commission</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div><div class="eyebrow">COMMISSION FORMATS</div><h2 class="section-title">Three ways to begin.</h2></div>
+        <p>These are indicative starting points for positioning and quoting. Final pricing depends on scale, production method, framing, delivery and installation.</p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card fade-up">
+          <div class="eyebrow">RESIDENTIAL</div>
+          <h3>Signature commission</h3>
+          <div class="price">From KES 45,000</div>
+          <p>A unique computational artwork developed for one defined residential space.</p>
+          <ul><li>• Wall-photo consultation</li><li>• Two initial visual directions</li><li>• Defined revision round</li><li>• Archival production</li><li>• Signed documentation</li></ul>
+        </article>
+        <article class="offer-card fade-up">
+          <div class="eyebrow">PREMIUM SCALE</div>
+          <h3>Large-format commission</h3>
+          <div class="price">From KES 75,000</div>
+          <p>For statement walls, double-height spaces and larger collector interiors.</p>
+          <ul><li>• Site-led composition</li><li>• Larger production formats</li><li>• Framing consultation</li><li>• Installation coordination option</li><li>• Certificate & provenance record</li></ul>
+        </article>
+        <article class="offer-card fade-up">
+          <div class="eyebrow">CORPORATE / HOSPITALITY</div>
+          <h3>Spatial art programme</h3>
+          <div class="price">From KES 100,000</div>
+          <p>Single statement works or coordinated artwork families for offices, hotels and property projects.</p>
+          <ul><li>• Design-team collaboration</li><li>• Multi-space palette planning</li><li>• Volume/project quoting</li><li>• Production scheduling</li><li>• Trade documentation</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule" id="visualizer">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div><div class="eyebrow">COMPLIMENTARY WALL PREVIEW</div><h2 class="section-title">See the idea in your own space.</h2></div>
+        <p>Upload a wall photo, choose a Nebula artwork and adjust its approximate scale. This quick browser preview is indicative; commissioned presentations can be refined before production.</p>
+      </div>
+
+      <div class="visualizer-wrap">
+        <div class="wall-stage fade-up" id="wallStage">
+          <div class="wall-placeholder" id="wallPlaceholder">
+            <div class="big">Upload your wall photo</div>
+            <div>Your image remains in your browser and is not uploaded to our server.</div>
+          </div>
+          <img id="wallImage" alt="Uploaded wall preview">
+          <img id="artOverlay" src="assets/images/nebula-emergence.webp" alt="Artwork overlay">
+        </div>
+        <aside class="visualizer-controls fade-up">
+          <div class="eyebrow">BUILD YOUR PREVIEW</div>
+          <div class="control-group" style="margin-top:24px">
+            <label class="file-drop">
+              <input type="file" accept="image/*" id="wallInput">
+              <strong>Choose wall photo</strong><br><span class="micro">JPG, PNG or phone photo</span>
+            </label>
+          </div>
+          <div class="control-group">
+            <label>Artwork</label>
+            <select id="artSelect">
+              <option value="assets/images/nebula-emergence.webp">Nebula I — Emergence</option>
+              <option value="assets/images/nebula-convergence.webp">Nebula II — Convergence</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>Approximate artwork size</label>
+            <input class="range" type="range" id="artSize" min="18" max="65" value="34">
+          </div>
+          <p class="preview-note">Tip: once your wall photo is loaded, drag the artwork to reposition it. This is an approximate visualizer, not a measurement tool.</p>
+          <a class="btn primary full" href="#enquiry">Request a refined commission preview</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div><div class="eyebrow">THE PROCESS</div><h2 class="section-title">From room to finished work.</h2></div>
+        <p>A clear commissioning process protects both the client and the artistic direction while keeping decisions manageable.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step fade-up"><div class="step">01</div><h3>Space</h3><p>Send a wall photo, dimensions, location and intended atmosphere.</p></div>
+        <div class="process-step fade-up"><div class="step">02</div><h3>Direction</h3><p>The studio develops initial visual directions around the space and brief.</p></div>
+        <div class="process-step fade-up"><div class="step">03</div><h3>Approval</h3><p>One direction is refined within the agreed revision allowance.</p></div>
+        <div class="process-step fade-up"><div class="step">04</div><h3>Production</h3><p>The approved work is produced to the agreed material, scale and finish.</p></div>
+        <div class="process-step fade-up"><div class="step">05</div><h3>Delivery</h3><p>Documentation, delivery and installation options are coordinated as quoted.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule">
+    <div class="container corporate-grid">
+      <div class="corp-card office fade-up">
+        <div class="eyebrow">CORPORATE ART</div>
+        <h3>Workplaces with identity.</h3>
+        <p>Reception areas, boardrooms and executive spaces can use commissioned computational work to create a distinct visual signature without resorting to generic décor.</p>
+      </div>
+      <div class="corp-card hotel fade-up">
+        <div class="eyebrow">HOSPITALITY ART</div>
+        <h3>A collection across a property.</h3>
+        <p>Coordinate palettes and related compositions across corridors, rooms, suites and public areas while preserving a consistent visual language.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="enquiry">
+    <div class="container collector-box fade-up">
+      <div class="collector-copy">
+        <div class="eyebrow">START A COMMISSION</div>
+        <h2>Tell us about the space.</h2>
+        <p class="muted">You do not need a finished creative brief. A wall photo, approximate size, location and budget range are enough to begin.</p>
+        <p class="micro">Typical commercial practice is to confirm the project with a deposit before custom development begins. Final payment structure should be stated in your issued quotation.</p>
+      </div>
+      <form class="collector-form" id="commissionForm">
+        <div class="form-row">
+          <div class="field"><label>Name</label><input name="name" required></div>
+          <div class="field"><label>Organisation</label><input name="organisation"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Project type</label>
+            <select name="projectType" required>
+              <option>Residential commission</option><option>Executive office</option><option>Hotel / hospitality</option><option>Interior design project</option><option>Property / show unit</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label>Space</label><input name="space" required placeholder="e.g. reception wall"></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label>Approx. artwork size</label><input name="size" required placeholder="e.g. 100 × 150 cm"></div>
+          <div class="field"><label>Budget range</label>
+            <select name="budget" required>
+              <option>KES 40,000–75,000</option><option>KES 75,000–150,000</option><option>KES 150,000–300,000</option><option>KES 300,000+</option><option>Need guidance</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label>Location</label><input name="location" required placeholder="Nairobi / Kenya / International"></div>
+        <div class="field"><label>Notes</label><textarea name="notes" placeholder="Tell us what you want the room to feel like, preferred palette, project timing, etc."></textarea></div>
+        <button class="btn primary" type="submit">Send commission enquiry</button>
+        <p class="micro">Contact routing is controlled in assets/js/config.js. Add your live WhatsApp number or email before active marketing.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section rule" id="faq">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div><div class="eyebrow">FAQ</div><h2 class="section-title">Before commissioning.</h2></div>
+        <p>Clear expectations make custom artwork easier to buy and easier to deliver.</p>
+      </div>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-q">Is the commissioned artwork unique?<span>+</span></button><div class="faq-a">The exact exclusivity and edition status should be stated in your quotation before work begins. A fully unique one-off commission can be priced differently from an editioned commissioned work.</div></div>
+        <div class="faq-item"><button class="faq-q">Can the colours be matched to an interior?<span>+</span></button><div class="faq-a">Yes. Palette can be informed by the interior while the composition remains recognisably within the Elimara Studio visual language.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you work with interior designers and architects?<span>+</span></button><div class="faq-a">Yes. Trade and project enquiries can include dimension schedules, installation locations, visual palettes and multi-piece planning.</div></div>
+        <div class="faq-item"><button class="faq-q">Can work be delivered outside Nairobi?<span>+</span></button><div class="faq-a">Delivery and packaging can be quoted according to destination, artwork size, framing and installation requirements.</div></div>
+        <div class="faq-item"><button class="faq-q">How long does a commission take?<span>+</span></button><div class="faq-a">The production timeline depends on design complexity, approvals, print/framing lead time and delivery. The confirmed schedule should be included in the project quotation.</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Elimara<br>Studio</div>
+        <p style="max-width:420px;margin-top:20px">Limited-edition computational art and site-specific commissions for collectors, residences, workplaces and hospitality spaces.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="eyebrow">Explore</div>
+        <a href="index.html#works">Available works</a>
+        <a href="commissions.html">Commissions</a>
+        <a href="index.html#provenance">Provenance</a>
+        <a href="index.html#collectors">Collector list</a>
+      </div>
+      <div class="footer-nav">
+        <div class="eyebrow">Studio</div>
+        <a href="index.html#about">About</a>
+        <a href="#" onclick="elimaraContact('a private viewing');return false;">Private viewing</a>
+        <a href="#" onclick="elimaraContact('a trade or interior-design enquiry');return false;">Trade enquiries</a>
+        <a href="commissions.html#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Elimara Technologies Limited / Artist. All rights reserved.</span>
+      <span>Nairobi, Kenya · International delivery quoted individually</span>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal" id="contactSetupModal">
+  <div class="modal-panel">
+    <button class="close-btn" data-close="contactSetupModal">×</button>
+    <div class="eyebrow">CONTACT SETUP</div>
+    <h2>Almost ready for enquiries.</h2>
+    <p class="muted">The site is prepared for WhatsApp or email enquiries, but your live contact details have not yet been inserted.</p>
+    <div class="status-box" id="contactSetupText"></div>
+    <p class="micro">Add your WhatsApp number and/or email in <strong>assets/js/config.js</strong>. No other site files need to change.</p>
+  </div>
+</div>
+
+<div class="modal" id="reserveModal">
+  <div class="modal-panel">
+    <button class="close-btn" data-close="reserveModal">×</button>
+    <div class="eyebrow">RESERVE AN EDITION</div>
+    <h2 id="reserveTitle">Artwork</h2>
+    <div class="product-price" id="reservePrice"></div>
+    <form id="reserveForm">
+      <input type="hidden" name="artwork" id="reserveArtwork">
+      <div class="form-row">
+        <div class="field"><label>Name</label><input required name="name"></div>
+        <div class="field"><label>Phone</label><input required name="phone" placeholder="+254..."></div>
+      </div>
+      <div class="field"><label>Delivery location</label><input required name="location" placeholder="Nairobi / Kenya / International"></div>
+      <div class="status-box">No payment is taken by this demo checkout. When live payment credentials are connected, this reservation flow can be upgraded to M-PESA, card and bank payment.</div>
+      <button class="btn primary full" type="submit">Send reservation request</button>
+    </form>
+  </div>
+</div>
+
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
