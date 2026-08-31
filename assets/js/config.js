@@ -5,8 +5,8 @@ window.ELIMARA_CONFIG = {
   currency: "KES",
 
   // Add your real contact details here before actively marketing the site.
-  email: "",
-  whatsappNumber: "", // international format, digits only e.g. 2547XXXXXXXX
+  email: "info@shulehub.org",
+  whatsappNumber: "254763941520", // international format, digits only e.g. 2547XXXXXXXX
   instagramUrl: "",
   linkedinUrl: "",
 
