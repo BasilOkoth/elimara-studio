@@ -5,16 +5,32 @@ services:
     buildCommand: echo "No build required"
     staticPublishPath: .
     pullRequestPreviewsEnabled: true
+
     headers:
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
+
       - path: /*
         name: Referrer-Policy
         value: strict-origin-when-cross-origin
+
       - path: /*
         name: X-Frame-Options
         value: SAMEORIGIN
-      - path: /assets/*
+
+      - path: /assets/js/*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+
+      - path: /assets/css/*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+
+      - path: /assets/data/*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+
+      - path: /assets/images/*
         name: Cache-Control
         value: public, max-age=604800
