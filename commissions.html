@@ -47,7 +47,7 @@
     <div class="copy fade-up">
       <div class="eyebrow">COMMISSION ELIMARA STUDIO</div>
       <h1 class="display-sm">Made for your wall,<br>not anybody's wall.</h1>
-      <p class="lead">Site-specific computational art for residences, executive offices, hotels, receptions and interior-design projects. Begin with the space. We develop the artwork around it.</p>
+      <p class="lead" data-content-key="commission_hero_lead">Site-specific computational art for residences, executive offices, hotels, receptions and interior-design projects. Begin with the space. We develop the artwork around it.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#visualizer">Preview art on your wall</a>
         <a class="btn" href="#enquiry">Request a commission</a>
@@ -192,7 +192,7 @@
         <div class="field"><label>Location</label><input name="location" required placeholder="Nairobi / Kenya / International"></div>
         <div class="field"><label>Notes</label><textarea name="notes" placeholder="Tell us what you want the room to feel like, preferred palette, project timing, etc."></textarea></div>
         <button class="btn primary" type="submit">Send commission enquiry</button>
-        <p class="micro">Contact routing is controlled in assets/js/config.js. Add your live WhatsApp number or email before active marketing.</p>
+        <p class="micro">Your enquiry will open in WhatsApp when submitted.</p>
       </form>
     </div>
   </section>
@@ -247,11 +247,10 @@
 <div class="modal" id="contactSetupModal">
   <div class="modal-panel">
     <button class="close-btn" data-close="contactSetupModal">×</button>
-    <div class="eyebrow">CONTACT SETUP</div>
-    <h2>Almost ready for enquiries.</h2>
-    <p class="muted">The site is prepared for WhatsApp or email enquiries, but your live contact details have not yet been inserted.</p>
+    <div class="eyebrow">CONTACT ELIMARA STUDIO</div>
+    <h2>Send your enquiry.</h2>
+    <p class="muted">Use the enquiry details below and the Studio will respond as soon as possible.</p>
     <div class="status-box" id="contactSetupText"></div>
-    <p class="micro">Add your WhatsApp number and/or email in <strong>assets/js/config.js</strong>. No other site files need to change.</p>
   </div>
 </div>
 
@@ -275,8 +274,11 @@
 </div>
 
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase-config.js?v=admin1"></script>
+<script src="assets/js/public-catalog.js?v=admin1"></script>
+<script src="assets/js/config.js?v=admin1"></script>
+<script src="assets/js/app.js?v=admin1"></script>
 
 </body>
 </html>

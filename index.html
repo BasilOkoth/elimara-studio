@@ -58,7 +58,7 @@
     <div class="hero-copy fade-up">
       <div class="eyebrow">NAIROBI · 2026 COLLECTION</div>
       <h1 class="display">Computational<br>art, made<br>physical.</h1>
-      <p class="lead">Limited-edition generative works produced as archival collector objects — signed, numbered and documented with provenance.</p>
+      <p class="lead" data-content-key="home_hero_lead">Limited-edition generative works produced as archival collector objects — signed, numbered and documented with provenance.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#works">Explore available works</a>
         <a class="btn" href="commissions.html">Commission a piece</a>
@@ -82,7 +82,7 @@
   </div>
 
   <section class="statement">
-    <p class="fade-up">Each work begins as a computational system and ends as a physical object: material, scale, edition, signature and provenance.</p>
+    <p class="fade-up" data-content-key="home_statement">Each work begins as a computational system and ends as a physical object: material, scale, edition, signature and provenance.</p>
   </section>
 
   <section class="section" id="works">
@@ -92,7 +92,7 @@
           <div class="eyebrow">AVAILABLE WORKS</div>
           <h2 class="section-title">The Nebula collection</h2>
         </div>
-        <p>Made to order rather than mass produced. Each collector edition is produced only when acquired, individually signed and accompanied by a matching authenticity record.</p>
+        <p data-content-key="works_intro">Made to order rather than mass produced. Each collector edition is produced only when acquired, individually signed and accompanied by a matching authenticity record.</p>
       </div>
 
       <div class="works-grid">
@@ -219,9 +219,9 @@
         <div class="quote">“A system can be precise and still produce wonder.”</div>
       </div>
       <div class="fade-up">
-        <p>Elimara Studio explores the meeting point between computation, repetition, visual rhythm and physical space. The works are generated through custom computational processes and then deliberately translated into limited physical editions.</p>
-        <p>The studio is a creative division of Elimara Technologies Limited and is developing a contemporary African digital-to-physical art practice from Nairobi.</p>
-        <p>The aim is not unlimited reproduction. It is to make computational work that can exist with the material presence, documentation and permanence expected of collectible art.</p>
+        <p data-content-key="about_p1">Elimara Studio explores the meeting point between computation, repetition, visual rhythm and physical space. The works are generated through custom computational processes and then deliberately translated into limited physical editions.</p>
+        <p data-content-key="about_p2">The studio is a creative division of Elimara Technologies Limited and is developing a contemporary African digital-to-physical art practice from Nairobi.</p>
+        <p data-content-key="about_p3">The aim is not unlimited reproduction. It is to make computational work that can exist with the material presence, documentation and permanence expected of collectible art.</p>
       </div>
     </div>
   </section>
@@ -277,11 +277,10 @@
 <div class="modal" id="contactSetupModal">
   <div class="modal-panel">
     <button class="close-btn" data-close="contactSetupModal">×</button>
-    <div class="eyebrow">CONTACT SETUP</div>
-    <h2>Almost ready for enquiries.</h2>
-    <p class="muted">The site is prepared for WhatsApp or email enquiries, but your live contact details have not yet been inserted.</p>
+    <div class="eyebrow">CONTACT ELIMARA STUDIO</div>
+    <h2>Send your enquiry.</h2>
+    <p class="muted">Use the enquiry details below and the Studio will respond as soon as possible.</p>
     <div class="status-box" id="contactSetupText"></div>
-    <p class="micro">Add your WhatsApp number and/or email in <strong>assets/js/config.js</strong>. No other site files need to change.</p>
   </div>
 </div>
 
@@ -305,8 +304,11 @@
 </div>
 
 
-<script src="assets/js/config.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabase-config.js?v=admin1"></script>
+<script src="assets/js/public-catalog.js?v=admin1"></script>
+<script src="assets/js/config.js?v=admin1"></script>
+<script src="assets/js/app.js?v=admin1"></script>
 
 </body>
 </html>
