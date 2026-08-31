@@ -106,8 +106,17 @@ drop policy if exists "Admins manage artworks" on public.artworks;
 create policy "Admins manage artworks" on public.artworks for all to authenticated using (public.is_studio_admin()) with check (public.is_studio_admin());
 
 drop policy if exists "Public read mockups" on public.artwork_mockups;
-create policy "Public read mockups" on public.artwork_mockups for select to anon, authenticated using (
-  exists(select 1 from public.artworks a where a.id=artwork_id and (a.published=true or public.is_studio_admin()))
+create policy "Public read mockups"
+on public.artwork_mockups
+for select
+to anon, authenticated
+using (
+  public.is_studio_admin()
+  OR artwork_id IN (
+    SELECT id
+    FROM public.artworks
+    WHERE published = true
+  )
 );
 drop policy if exists "Admins manage mockups" on public.artwork_mockups;
 create policy "Admins manage mockups" on public.artwork_mockups for all to authenticated using (public.is_studio_admin()) with check (public.is_studio_admin());
